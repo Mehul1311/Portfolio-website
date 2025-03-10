@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about.html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #010121;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgb(7, 7, 53);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            height: 80px;
+        }
+
+        .left {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .right ul {
+            display: flex;
+        }
+
+        .right ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        .right ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .right ul li a:hover {
+            color: rgb(156, 79, 228);
+        }
+
+        .section-heading {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+
+        .single-about-txt {
+            width: 55%;
+        }
+
+        .single-about-txt h3 {
+            color: #9c4fe4;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .single-about-txt p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .single-about-add-info h3 {
+            color: #9c4fe4;
+            font-size: 1.5rem;
+        }
+
+        .single-about-add-info p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        .single-about-img {
+            width: 40%;
+            text-align: center;
+        }
+
+        .single-about-img img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .about-list-icon ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .about-list-icon ul li {
+            margin: 0 10px;
+        }
+
+        .about-list-icon ul li a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .about-list-icon ul li a:hover {
+            color: #9c4fe4;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Adjust styles for mobile */
+        }
+
+        footer {
+            background-color: rgb(7, 7, 53);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: rgb(156, 79, 228);
+        }
+
+        .footer-right p {
+            margin-left: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Mehul's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="about" class="about">
+        <div class="section-heading text-center">
+            <h2>About Me</h2>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="single-about-txt">
+                    <h3>
+                        I am a Web Developer and Aspiring Full Stack Developer.
+                    </h3>
+                    <br>
+                    <p>
+                    <ul>
+                        <li>
+                            <b>Early Life and Education </b>
+                            <br>
+                            <br>
+                            Mehul Sain is a 20-year-old final-year Bachelor of Computer Applications (BCA) student from
+                            India. From the beginning, he has been passionate about technology and software development.
+                            His academic journey has been a blend of theoretical learning and practical implementation,
+                            shaping him into a skilled programmer.
+                        </li>
+                        <br>
+                        <li>
+                            <b>Technical Skills and Experience</b>
+                            <br>
+                            <br>
+                            With one year of experience as a Python Django developer, Mehul has honed his backend
+                            development skills. However, his passion for technology doesn’t stop there. He is currently
+                            working as a frontend developer, mastering JavaScript while simultaneously improving his
+                            Data Structures and Algorithms (DSA) in C++. His ultimate goal is to become a full-stack
+                            developer, combining both frontend and backend expertise.
+                        </li>
+                        <br>
+                        <li>
+                            <b> Web Development and Projects</b>
+                            <br>
+                            <br>
+                            Mehul has built several projects, including Jarvis (a Python-based AI virtual assistant), a
+                            portfolio website, a Spotify clone, and Lightning Garage. He has also developed a
+                            client-based website, Nomad Exports World, during his internship, where he worked with HTML,
+                            CSS, JavaScript, and PHP. His ability to handle real-world projects showcases his strong
+                            problem-solving skills and dedication to improving his craft.
+                        </li>
+                        <br>
+                        <li><b>Work-Life Balance and Self-Improvement</b>
+                            <br>
+                            <br>
+                            Balancing multiple responsibilities, Mehul manages his college, job, gym, and
+                            self-improvement. He follows a structured routine that includes a high-protein 3200-calorie
+                            diet, morning walks, and a dedicated study plan. Additionally, he is enhancing his
+                            English-speaking skills and aims to excel in his final-year exams to achieve top scores.
+                        </li>
+                        <br>
+                        <li>
+                            <b>Future Aspirations</b>
+                            <br>
+                            <br>
+                            With a strong foundation in programming and web development, Mehul is determined to become a
+                            top-tier full-stack developer. His relentless pursuit of knowledge, discipline, and
+                            dedication to self-growth set him apart as a promising professional in the tech industry.
+                        </li>
+                    </ul>
+                    </p>
+                    <div class="row">
+                        <div class="single-about-add-info">
+                            <h3>Phone</h3>
+                            <p>+91 9057902949</p>
+                        </div>
+                        <div class="single-about-add-info">
+                            <h3>Email</h3>
+                            <p>mehulsain1603@gmail.com</p>
+                        </div>
+                        <div class="single-about-add-info">
+                            <h3>Website</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-about-img">
+                    <img src="assets/images/My photo.jpg" alt="profile_image">
+                    <div class="about-list-icon">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="education.html">Education</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Phone: +91 90579 02949 <br>
+                Email: mehulsain1603@gmail.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mehul</p>
+            <p>Powered by Mehul</p>
+        </div>
+    </footer>
+</body>
+
+</html>

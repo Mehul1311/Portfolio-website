@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext"
+        rel="stylesheet">
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png" />
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!--flat icon css-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css">
+
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(1, 1, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            background-color: rgb(7, 7, 53);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            height: 80px;
+        }
+
+        .left {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .right ul {
+            display: flex;
+        }
+
+        .right ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        .right ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .right ul li a:hover {
+            color: rgb(156, 79, 228);
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            gap: 50px;
+        }
+
+        .about-section {
+            max-width: 50%;
+        }
+
+        .about-section h1,
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: rgb(156, 79, 228);
+        }
+
+        .about-section p,
+        .section-content {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #ddd;
+            text-align: justify;
+        }
+
+        #element {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(156, 79, 228);
+        }
+
+        .profile-image img {
+            width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .icon {
+            font-size: 3rem;
+            color: rgb(156, 79, 228);
+        }
+
+        .education {
+            background: #f9fbfd;
+            padding-top: 50px;
+        }
+
+        .education-horizontal-timeline {
+            padding: 80px 0;
+        }
+
+
+        /*.education-horizontal-timeline*/
+        .education-horizontal-timeline .col-sm-4 {
+            padding: 0 2px;
+        }
+
+        .single-horizontal-timeline .experience-time h3 {
+            text-transform: capitalize;
+        }
+
+        .single-horizontal-timeline .experience-time h3 span {
+            text-transform: lowercase;
+        }
+
+        .single-horizontal-timeline .timeline-content h5 {
+            margin: 15px 0;
+        }
+
+        .single-horizontal-timeline p {
+            color: #999fb3;
+            max-width: 335px;
+        }
+
+        /*.timeline-horizontal-border*/
+        .timeline-horizontal-border {
+            display: flex;
+            align-items: center;
+            padding: 26px 0 30px;
+        }
+
+        .timeline-horizontal-border i {
+            font-size: 10px;
+            color: rgb(156, 79, 228);
+            margin-right: 5px;
+        }
+
+        span.single-timeline-horizontal {
+            display: inline-block;
+            background: #b2c1ce;
+            height: 1px;
+            width: 380px;
+        }
+
+        span.single-timeline-horizontal.spacial-horizontal-line {
+            width: 88px;
+        }
+
+        /*.timeline-horizontal-border*/
+
+        /*.education-horizontal-timeline*/
+        /* Swiper Container */
+        .swiper-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* Swiper Slide Styling */
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Background Colors */
+        .testimonial-box.yellow {
+            background: #050310;
+        }
+
+        .testimonial-box.purple {
+            background: #030946;
+        }
+
+        .testimonial-box.blue {
+            background: #050310;
+        }
+
+        .testimonial-box.pink {
+            background: #030946;
+        }
+
+        /* Typography */
+        .swiper-slide h1 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .swiper-slide p {
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        /* Testimonial Author */
+        .text-right {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .designation {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Swiper Pagination */
+        .swiper-pagination {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.8);
+            opacity: 1;
+            transition: background 0.3s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #fff;
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Footer */
+
+
+        footer {
+            background-color: rgb(7, 7, 53);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: rgb(156, 79, 228);
+        }
+
+        .footer-right p {
+            margin-left: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: rgb(96, 10, 176);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: rgb(156, 79, 228);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Mehul's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome-hero" class="welcome-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="header-text">
+                            <h2>hi <span></span> i am <span>Mehul Sain </span> </h2>
+                            <span id="element"></span>
+                            <!-- <a href="assets/download/browney.txt" download>download resume</a> -->
+                        </div><!--/.header-text-->
+                    </div><!--/.col-->
+                </div><!-- /.row-->
+            </div><!-- /.container-->
+
+        </section><!--/.welcome-hero-->
+        <!--welcome-hero end -->
+
+        <!--about start -->
+        <section id="about" class="about">
+            <div class="section-heading text-center">
+                <h2>about me</h2>
+            </div>
+            <div class="container">
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="single-about-txt">
+                                <h3>
+                                    I am a passionate Front-End Developer with ambitions to become a Full-Stack Web
+                                    Developer. With a strong foundation in web technologies and hands-on experience in
+                                    both front-end and back-end development, I strive to build user-friendly, efficient,
+                                    and dynamic web applications.
+                                </h3>
+                                <p>
+                                    Web Developer Intern – JapaneseCarTrade.com (2024 – 2025)
+                                    Worked for 5 months, gaining expertise in HTML, CSS, JavaScript, and related
+                                    frameworks.
+                                    Developed both static and dynamic websites, improving site functionality and
+                                    performance.
+                                    Strengthened problem-solving skills by working on real-world web development
+                                    challenges.
+                                    Played a crucial role in transforming ideas into fully functional web pages.
+                                    Python Developer Intern – Startslabs (2024)
+                                    Completed a 3-month internship focused on Python development.
+                                    Worked on various projects, including Jarvis, to enhance coding and automation
+                                    skills.
+                                    Gained experience in backend logic and automation while collaborating with a
+                                    development team.
+                                </p>
+                                <h3>
+                                    Current Focus
+                                    I am currently enhancing my PHP and full-stack development skills to expand my
+                                    expertise and take on more complex web projects. My goal is to build scalable,
+                                    high-performance web applications that deliver seamless user experiences.
+
+
+                                </h3>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="single-about-add-info">
+                                            <h3>phone</h3>
+                                            <p>+91 9057902949</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-about-add-info">
+                                            <h3>website</h3>
+                                            <p>Nomadexport</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-about-add-info">
+                                            <h3>email</h3>
+                                            <p>mehulsain1603@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-5">
+                            <div class="single-about-img">
+                                <img src="assets/images/My photo.jpg" alt="profile_image">
+                                <div class="about-list-icon">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li><!-- / li -->
+                                        <li>
+                                            <a href="https://nomadexportsworld.com/">
+                                                <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                            </a>
+
+                                        </li><!-- / li -->
+                                        <li>
+                                            <a href="https://x.com/">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+
+                                        </li><!-- / li -->
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/mehul-sain-982311354/#">
+                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </li><!-- / li -->
+                                        <li>
+                                            <a href="https://www.instagram.com/mehul.ifyk/#">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li><!-- / li -->
+
+
+                                    </ul><!-- / ul -->
+                                </div><!-- /.about-list-icon -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/.about-->
+        <!--about end -->
+        <!-- <section class="section">
+            <i class="fas fa-briefcase icon"></i>
+            <div>
+                <h2 class="section-title">Past Experience</h2>
+                <p class="section-content">
+                <h3>
+                    Python Developer Intern – Startslabs (2024, 3 Months)
+                </h3>
+                <br>
+                <ul>
+                    <li>Developed and optimized Python-based applications during the internship.</li>
+                    <li>Gained hands-on experience in software development and problem-solving.</li>
+                    <li>Worked on projects like Jarvis, enhancing automation and AI functionalities.</li>
+                    <li>Successfully completed the internship and transitioned to independent project development.</li>
+                </ul>
+                </p>
+                <br>
+                <br>
+                <p>
+                <h3>Web Developer Intern – JapaneseCarTrade.com (2024-2025, 5 Months)</h3>
+                <br>
+                <ul>
+                    <li>Kickstarted web development career, mastering HTML, CSS, JavaScript, and related frameworks.
+                    </li>
+                    <li>Gained expertise in transforming static websites into dynamic, interactive platforms.</li>
+                    <li>Applied modern web development practices to enhance website functionality and user experience.
+                    </li>
+                    <li>Contributed to real-world projects, strengthening front-end and full-stack development skills.
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </section> -->
+        <!--skills start -->
+        <section id="skills" class="skills">
+            <div class="skill-content">
+                <div class="section-heading text-center">
+                    <h2>skills</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single-skill-content">
+                                <div class="barWrapper">
+                                    <span class="progressText">adobe photoshop</span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>90%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                                <div class="barWrapper">
+                                    <span class="progressText">Bootstrap</span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="85"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>85%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                                <div class="barWrapper">
+                                    <span class="progressText">adobe Premier Pro</span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="97"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>97%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                                <div class="barWrapper">
+                                    <span class="progressText">React Js</span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>80%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single-skill-content">
+                                <div class="barWrapper">
+                                    <span class="progressText">html 5</span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>90%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                                <div class="barWrapper">
+                                    <span class="progressText">css 3 </span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="85"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>85%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                                <div class="barWrapper">
+                                    <span class="progressText">communication</span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="97"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>97%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                                <div class="barWrapper">
+                                    <span class="progressText"> JavaScript</span>
+                                    <div class="single-progress-txt">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90"
+                                                aria-valuemin="10" aria-valuemax="100" style="">
+
+                                            </div>
+                                        </div>
+                                        <h3>90%</h3>
+                                    </div>
+                                </div><!-- /.barWrapper -->
+                            </div>
+                        </div>
+                    </div><!-- /.row -->
+                </div> <!-- /.container -->
+            </div><!-- /.skill-content-->
+
+        </section><!--/.skills-->
+        <!--skills end -->
+        <!--experience start -->
+        <section id="experience" class="experience">
+            <div class="section-heading text-center">
+                <h2>experience</h2>
+            </div>
+            <div class="container">
+                <div class="experience-content">
+                    <div class="main-timeline">
+                        <ul>
+                            <li>
+                                <div class="single-timeline-box fix">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="experience-time text-right">
+                                                <h2>2024 - Present</h2>
+                                                <h3>Web Developer</h3>
+                                            </div><!--/.experience-time-->
+                                        </div><!--/.col-->
+                                        <div class="col-md-offset-1 col-md-5">
+                                            <div class="timeline">
+                                                <div class="timeline-content">
+                                                    <h4 class="title">
+                                                        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                        Exim Infotek
+                                                    </h4>
+                                                    <h5>Jaipur, India</h5>
+                                                    <p class="description">
+                                                        Worked as a Web developer and also learn my intermmidiate
+                                                        skills.
+                                                    </p>
+                                                </div><!--/.timeline-content-->
+                                            </div><!--/.timeline-->
+                                        </div><!--/.col-->
+                                    </div>
+                                </div><!--/.single-timeline-box-->
+                            </li>
+
+                            <li>
+                                <div class="single-timeline-box fix">
+                                    <div class="row">
+                                        <div class="col-md-offset-1 col-md-5 experience-time-responsive">
+                                            <div class="experience-time">
+                                                <h2>
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    2024 - 2025
+                                                </h2>
+                                                <h3>Intern</h3>
+                                            </div><!--/.experience-time-->
+                                        </div><!--/.col-->
+                                        <div class="col-md-5">
+                                            <div class="timeline">
+                                                <div class="timeline-content text-right">
+                                                    <h4 class="title">
+                                                        JapaneseCarTrade
+                                                    </h4>
+                                                    <h5>Jaipur, Rajasthan</h5>
+                                                    <p class="description">
+                                                        Entered in my Web development career there.
+                                                    </p>
+                                                </div><!--/.timeline-content-->
+                                            </div><!--/.timeline-->
+                                        </div><!--/.col-->
+                                        <div class="col-md-offset-1 col-md-5 experience-time-main">
+                                            <div class="experience-time">
+                                                <h2>
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    2024 - 2025
+                                                </h2>
+                                                <h3>Web developer Intern</h3>
+                                            </div><!--/.experience-time-->
+                                        </div><!--/.col-->
+                                    </div>
+                                </div><!--/.single-timeline-box-->
+                            </li>
+
+                            <li>
+                                <div class="single-timeline-box fix">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="experience-time text-right">
+                                                <h2>2024</h2>
+                                                <h3>Python Intern</h3>
+                                            </div><!--/.experience-time-->
+                                        </div><!--/.col-->
+                                        <div class="col-md-offset-1 col-md-5">
+                                            <div class="timeline">
+                                                <div class="timeline-content">
+                                                    <h4 class="title">
+                                                        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                        Startlabs
+                                                    </h4>
+                                                    <h5>Jaipur, Rajasthan</h5>
+                                                    <p class="description">
+                                                        Starting phase of my first internship I learn about python lil
+                                                        bit.
+                                                    </p>
+                                                </div><!--/.timeline-content-->
+                                            </div><!--/.timeline-->
+                                        </div><!--/.col-->
+                                    </div>
+                                </div><!--/.single-timeline-box-->
+                            </li>
+
+                            <li>
+                                <div class="single-timeline-box fix">
+                                    <div class="row">
+                                        <div class="col-md-offset-1 col-md-5 experience-time-responsive">
+                                            <div class="experience-time">
+                                                <h2>
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    2024 - present
+                                                </h2>
+                                                <h3>Portfolio Website Project</h3>
+                                            </div><!--/.experience-time-->
+                                        </div><!--/.col-->
+                                        <div class="col-md-5">
+                                            <div class="timeline">
+                                                <div class="timeline-content text-right">
+                                                    <h4 class="title">
+                                                        For Myself
+                                                    </h4>
+                                                    <h5>Jaipur, Rajasthan</h5>
+                                                    <p class="description">
+                                                        Portfolio Website for showcasing my Own Projects, achievement &
+                                                        Education!
+                                                    </p>
+                                                </div><!--/.timeline-content-->
+                                            </div><!--/.timeline-->
+                                        </div><!--/.col-->
+                                        <div class="col-md-offset-1 col-md-5 experience-time-main">
+                                            <div class="experience-time">
+                                                <h2>
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    2025
+                                                </h2>
+                                                <h3>Project Website</h3>
+                                            </div><!--/.experience-time-->
+                                        </div><!--/.col-->
+                                    </div>
+                                </div><!--/.single-timeline-box-->
+                            </li>
+
+                        </ul>
+                    </div><!--.main-timeline-->
+                </div><!--.experience-content-->
+            </div>
+
+        </section><!--/.experience-->
+        <!--experience end -->
+
+
+
+        <!-- Achievements Starts -->
+        <section id="experience" class="experience">
+            <div class="section-heading text-center">
+                <h2>Achievements</h2>
+                <!-- Swiper -->
+                <div class="swiper-container testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-box yellow">
+                            <h1>Html Certificate</h1>
+                            <p>This certificate is awarded for successfully completing the HTML course, demonstrating
+                                proficiency in structuring web pages, semantic markup, and responsive design principles.
+                                Your dedication to learning and mastering HTML is commendable </p>
+                            <div class="text-right">
+                                <p class="name">- Udemy</p>
+                                <p class="designation"></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-box purple">
+                            <h1>CSS Certificate</h1>
+                            <p>"This certificate is awarded for successfully completing the CSS course, showcasing
+                                expertise in styling, layout design, responsiveness, and modern web aesthetics. Your
+                                commitment to mastering CSS is truly commendable."</p>
+                            <div class="text-right">
+                                <p class="name">- Udemy</p>
+                                <p class="designation"></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-box blue">
+                            <h1>Built with Bootstrap</h1>
+                            <p>"This certificate is awarded for successfully completing the Bootstrap course,
+                                demonstrating proficiency in building responsive, mobile-first websites using
+                                Bootstrap's grid system, components, and utilities. Your dedication to learning
+                                Bootstrap is commendable."</p>
+                            <div class="text-right">
+                                <p class="name">- Coursera</p>
+                                <p class="designation"></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-box pink">
+                            <h1>Responsive template</h1>
+                            <p>"This certificate is awarded for successfully completing the Responsive Web Design course
+                                through YouTube learning, showcasing expertise in creating mobile-friendly, flexible,
+                                and adaptive web layouts. Your dedication to mastering responsiveness is commendable."
+                            </p>
+                            <div class="text-right">
+                                <p class="name">- Udemy</p>
+                                <p class="designation"></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-box yellow">
+                            <h1>Pixel Perfect</h1>
+                            <p>completing the CSS Grid course, demonstrating proficiency in creating flexible,
+                                responsive, and modern web layouts. Your dedication to mastering CSS Grid is
+                                commendable. </p>
+                            <div class="text-right">
+                                <p class="name">- Youtube</p>
+                                <p class="designation"></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-box purple">
+                            <h1>JavaScript</h1>
+                            <p>completing the JavaScript, demonstrating proficiency in creating flexible, responsive,
+                                and modern web layouts. Your dedication to mastering CSS Grid is commendable.</p>
+                            <div class="text-right">
+                                <p class="name">- Udemy</p>
+                                <p class="designation"></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-box blue">
+                            <h1>React Js</h1>
+                            <p>completing the React Js course, demonstrating proficiency in creating flexible,
+                                responsive, and modern web layouts. Your dedication to mastering CSS Grid is
+                                commendable.</p>
+                            <div class="text-right">
+                                <p class="name">- Udemy</p>
+                                <p class="designation"></p>
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide testimonial-box pink">
+                    <h1>Minimal and Clean</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                    <div class="text-right">
+                      <p class="name">- Rocky Hych</p>
+                      <p class="designation">CTO, Upside Down</p>
+                    </div>
+                  </div> -->
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        </div>
+        </section>
+        <!-- achievement ends -->
+    </main>
+    <footer>
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="education.html">Education</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Phone: +91 90579 02949 <br>
+                Email: mehulsain1603@gmail.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mehul</p>
+            <p>Powered by Mehul</p>
+        </div>
+        <button id="scrollToTopBtn">⬆</button>
+
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: [' Web developer', 'Aspiring full stack developer'],
+            typeSpeed: 50,
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.style.display = "block";
+                } else {
+                    scrollToTopBtn.style.display = "none";
+                }
+            });
+
+            scrollToTopBtn.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+
+    </script>
+    <script src="assets/js/jquery.js"></script>
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!--bootstrap.min.js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- bootsnav js -->
+    <script src="assets/js/bootsnav.js"></script>
+
+    <!-- jquery.sticky.js -->
+    <script src="assets/js/jquery.sticky.js"></script>
+
+    <!-- for progress bar start-->
+
+    <!-- progressbar js -->
+    <script src="assets/js/progressbar.js"></script>
+
+    <!-- appear js -->
+    <script src="assets/js/jquery.appear.js"></script>
+
+    <!-- for progress bar end -->
+
+    <!--owl.carousel.js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+
+    <!--Custom JS-->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

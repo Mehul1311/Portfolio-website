@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            background-color: rgb(1, 1, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgb(7, 7, 53);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            height: 80px;
+        }
+
+        .left {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .right ul {
+            display: flex;
+        }
+
+        .right ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        .right ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .right ul li a:hover {
+            color: rgb(156, 79, 228);
+        }
+
+        .section-heading {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #9C4FE4;
+        }
+
+        .slider-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(7, 7, 53);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .slide img {
+            width: 500px;
+            max-height: 300px;
+            border-radius: 10px;
+        }
+
+        .slide h3 {
+            color: rgb(156, 79, 228);
+            margin-top: 15px;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(125, 18, 225);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(156, 79, 228);
+        }
+
+        /* footer form here */
+        footer {
+            background-color: rgb(7, 7, 53);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: rgb(156, 79, 228);
+        }
+
+        .footer-right p {
+            margin-left: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Mehul's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!-- <li><a href="projects.html">Projects</a></li> -->
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="projects" class="projects">
+        <div class="section-heading">
+            <h2>PROJECTS</h2>
+        </div>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/images/jarvis.png" alt="Project 1">
+                    <h3>Jarvis – Your AI Virtual Assistant</h3>
+                    <p>
+                        **Jarvis** is a Python-based virtual assistant designed to automate tasks and enhance productivity.
+                        Built using various Python modules, it can perform functions like opening applications, fetching
+                        information, handling voice commands, and executing basic system tasks. With its smart
+                        integration, Jarvis simplifies daily operations, making it a reliable digital companion. Whether
+                        you need quick information or system control, Jarvis efficiently responds to commands, providing
+                        a seamless user experience.
+                    </p>
+                    <div class="button-container">
+                        <a href="https://github.com/Mehul1311/JARVIS.git" class="btn">Source</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/nomad.jpg" alt="Project 2">
+                    <h3>Nomad Exports World</h3>
+                    <p>During my internship, I developed the **Nomad Exports World** website for a client while working
+                        in the office. I was responsible for the entire frontend using **HTML, CSS, and JavaScript**.
+                        Additionally, I contributed to making the website dynamic by assisting with **PHP** integration.
+                        This project enhanced my skills in frontend development and gave me hands-on experience in
+                        collaborating on a real-world client project.</p>
+                    <div class="button-container">
+                        <a href="https://nomadexportsworld.com/" class="btn">Online</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="Project 3">
+                    <h3>Portfolio Website</h3>
+                    <p>I built my **portfolio website** using **HTML, CSS, and JavaScript**, ensuring an interactive UI and
+                        responsive design. I applied my experience in developing static to dynamic websites, integrating
+                        web animations and smooth transitions for a better user experience. I focused on clean code,
+                        optimized performance, and a professional layout. Additionally, I incorporated modern frameworks
+                        and best practices to enhance functionality. This project showcases my web development skills,
+                        creativity, and ability to build user-friendly interfaces effectively.</p>
+                    <div class="button-container">
+                        <a href="https://github.com/Mehul1311/" class="btn">Source</a>
+                        <a href="https://example2.com" class="btn">Online</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/Lightning.jpg" alt="Project 4">
+                    <h3>Lightning Garage</h3>
+                    <p>During my learning phase, I built a website called **Lightning Garage** using only **HTML and
+                        CSS**. I also used **a little JavaScript**, but I couldn't make it responsive. The project was a
+                        basic implementation of my web development skills at that time. While it had a structured layout
+                        and styling, it lacked responsiveness, which limited its usability on different screen sizes.
+                        This project helped me understand the importance of responsiveness and the need for advanced CSS
+                        techniques or frameworks like **Flexbox, Grid, and media queries**.</p>
+                    <div class="button-container">
+                        <a href="https://github.com/Mehul1311/Ligntning-Garadge.git" class="btn">Source</a>
+                        <a href="https://mehul1311.github.io/Ligntning-Garadge/" class="btn">Online</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/Spotify.jpg" alt="Project 5">
+                    <h3>Spotify Clone</h3>
+                    <p>I built a **Spotify Clone** using **HTML, CSS, and JavaScript** as a learning project. The design
+                        replicates Spotify’s UI with a responsive layout, a navigation bar, and a music player. It
+                        includes features like **play, pause, next/previous track**, and a progress bar. JavaScript
+                        handles **audio controls and dynamic song lists**. CSS ensures a sleek, dark-themed interface.
+                        This project helped me understand **DOM manipulation, event handling, and responsive design**
+                        while improving my front-end skills.</p>
+                    <div class="button-container">
+                        <a href="https://github.com/Mehul1311/Spotify-Clone/" class="btn">Source</a>
+                        <a href="https://mehul1311.github.io/Spotify-Clone/" class="btn">Online</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>    
+    <footer>
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Projects</a>
+                <a href="education.html">Education</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Phone: +91 90579 02949 <br>
+                Email: mehulsain1603@gmail.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mehul</p>
+            <p>Powered by Mehul</p>
+        </div>
+    </footer>
+    <script>
+        let index = 0;
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.slide');
+            index += step;
+            if (index >= slides.length) index = 0;
+            if (index < 0) index = slides.length - 1;
+            document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+</body>
+
+</html>
